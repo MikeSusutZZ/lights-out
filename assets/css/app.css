@@ -69,7 +69,7 @@
   background-color: #fefefe;
   margin: 15vh auto;
   padding: 20px;
-  border: 1px solid #888;
+  
   width: 80%;
 }
 
@@ -123,9 +123,15 @@
 }
 
 button {
-  @apply bg-stone-300;
+  @apply bg-blue-300;
 }
 
 button[data-on] {
   @apply bg-rose-400;
 }
+
+.thick-border {
+  border-width: 4px !important;
+  border-color: #000000 !important;
+}
+
