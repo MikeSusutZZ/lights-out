@@ -85,13 +85,20 @@ defmodule LightsOutGameWeb.Board do
         active_tiles: active_count
       ]
 
-      # Assign the updated values to the socket.
-      {:noreply, assign(socket, new_assigns)}
+      socket = assign(socket, new_assigns)
+
+      # Check if the game has ended and push the "gameover" event if so.
+      if win == "red" do
+        {:noreply, push_event(socket, "gameover", %{win: win})}
+      else
+        {:noreply, socket}
+      end
     else
       # If the turn limit has been reached, don't allow the bot to make a move.
       {:noreply, socket}
     end
   end
+
 
 
   def find_optimal_move(grid, chosen, direction) do
