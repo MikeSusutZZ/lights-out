@@ -1,4 +1,4 @@
-# LightsOutGame
+# LightsOutGame modification: Knight's Quest
 
 To start your Phoenix server:
 
@@ -7,12 +7,12 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+# How to play
+When you click a tile, that tile and all tiles in a knight's move either above, below, or right of where you clicked will be toggled. Direction is specified above the grid, and cycles up, right, down, up...
+The goal is to make over half (13) tiles to be your color by the end of 10 turns.
 
-## Learn more
+Once a tile has been clicked by either player, it can no longer be clicked by either player.
+Because blue is "The hammer" and thus has the advantage, red starts with more tiles.
+The board starts as a random position of 15 red and 10 blue tiles
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+If playing alone, play as red and on blue's turn, hit the bot move button!
